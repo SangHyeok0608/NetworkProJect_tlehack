@@ -34,8 +34,19 @@ public class TCPClient {
                     System.out.print("파일 경로를 입력하세요: ");
                     String filePath = reader.readLine();
                     File file = new File(filePath);
+
+
                     if (file.exists()) {
-                        // 파일 전송 코드 추가
+                        BufferedReader bufferedReader = new BufferedReader(new FileReader(filePath));
+
+                        String line;
+                        while ((line = bufferedReader.readLine()) != null) {
+                            writer.write(line);
+                            writer.newLine();
+                        }
+                        writer.flush();
+                        System.out.println("파일 전송이 완료되었습니다.");
+
                     } else {
                         System.out.println("파일이 존재하지 않습니다.");
                     }
