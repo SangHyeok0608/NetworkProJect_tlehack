@@ -1,6 +1,6 @@
 # NetworkProJect_tlehack
 
-java로 tcp를 이용한 통신을 구현하려고 합니다. 
+java로 tcp를 이용한 채팅 서비스를 개발하려고 합니다.
 
 TCPClient에서 숫자 1을 입력하면 TCPClient에서 TCPServer로 메세지를 보낸다는 뜻이다. 그리고 TCPClient에서 메세지를 입력하여 보내면, TCPServer는 받은 메세지를 출력한다.
 
