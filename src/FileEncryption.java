@@ -53,7 +53,7 @@ public class FileEncryption {
             byte[] inputBytes = new byte[16];
             int bytesRead;
             while ((bytesRead = inputStream.read(inputBytes)) != -1) {
-                byte[] outputBytes = cipher.update(inputBytes);
+                byte[] outputBytes = cipher.update(inputBytes, 0, bytesRead);
                 outputStream.write(outputBytes);
             }
             byte[] finalBytes = cipher.doFinal();
