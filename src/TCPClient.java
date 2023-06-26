@@ -4,7 +4,7 @@ import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
 
 public class TCPClient {
-    private static final int PORT = 9999;
+    private static final int PORT = 12000;
     private static final String SERVER_IP = "127.0.0.1";
 
     private static final byte[] Key = {
